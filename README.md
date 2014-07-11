@@ -23,3 +23,12 @@ then, inside the docker
 
 ```psql -U docker -h db --command "create database <db_name>"```
 
+
+
+additionally, you can extract a scaffolded app
+
+```sudo docker run -d --name yesod-postgres-scaffold yesod-postgres bash -c "tail -f < /dev/null"```
+```sudo docker cp yesod-postgres-scaffold:/scratch/scaffold <path_on_host_for_scaffolded_app>```
+```sudo docker stop yesod-postgres-scaffold```
+```sudo docker rm yesod-postgres-scaffold```
+
