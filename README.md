@@ -10,4 +10,16 @@ docker run -t -i -v /path/to/scaffolded/app/on/host:/code --link db:db yesod-pos
 ```
 
 
+note, gdoteof/postgres comes with a super user ```docker``` with password ```docker``` and a database ```docker```
+
+optionally you can add another database
+
+
+```docker run -t -i --link db:db yesod-postgres /bin/bash```
+
+then, inside the docker
+
+```apt-get install -y postgresql-client-9.3```
+
+```psql -U docker -h db --command "create database <db_name>"```
 
