@@ -27,7 +27,7 @@ then, inside the docker
 
 additionally, you can extract a scaffolded app
 
-```bash
+```shell
 sudo docker run -d --name yesod-postgres-scaffold yesod-postgres bash -c "tail -f < /dev/null"
 sudo docker cp yesod-postgres-scaffold:/scratch/scaffold <path_on_host_for_scaffolded_app>
 sudo docker stop yesod-postgres-scaffold
