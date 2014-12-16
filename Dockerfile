@@ -13,5 +13,5 @@ WORKDIR /scratch
 
 RUN printf %s\\n 'scaffold' 'p' | yesod init
 
-RUN cd scaffold && cabal install --enable-tests . yesod-platform yesod-bin --max-backjumps=-1 --reorder-goals
+RUN cd scaffold && cabal install --enable-tests . --max-backjumps=-1 --reorder-goals
 
